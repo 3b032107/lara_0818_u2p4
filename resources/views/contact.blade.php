@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+@extends('layouts.master')
+@section('title','Clean Blog-Contact')
     <body>
         <!-- Page Header-->
         <header class="masthead" style="background-image: url('{{asset('assets/img/contact-bg.jpg')}}')">
