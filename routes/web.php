@@ -12,14 +12,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\PostController;
 
 Route::get('/',function (){
-    return view('index');
+    return redirect(route('posts.index'));
 });
-
-//Route::get('posts',[PostController::class,'index'])->name('posts.index');
-//Route::get('post',[PostController::class,'show'])->name('posts.show');
-//Route::get('contact',[PostController::class,'contact'])->name('posts.contact');
-//Route::get('about',[PostController::class,'about'])->name('posts.about');
+Route::get('posts',[PostController::class,'index'])->name('posts.index');
+Route::get('post',[PostController::class,'show'])->name('posts.show');
+Route::get('contact',[PostController::class,'contact'])->name('posts.contact');
+Route::get('about',[PostController::class,'about'])->name('posts.about');
